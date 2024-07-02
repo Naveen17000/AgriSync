@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSync - Logistic Provider Home</title>
+    <style>
+         {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+
+  header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  main {
+    text-align: center;
+    padding: 20px;
+  }
+
+  p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  a button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #44b338;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for the button */
+    transition: background-color 0.3s ease;
+  }
+
+  a button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Media query for smaller devices */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+
+    .logo img {
+      max-width: 200px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="user-info">
+            <i class="fas fa-truck"></i> <span>John Doe</span>
+            <span>LP12345</span> </div>
+    </header>
+    <main>
+        <h2>Current Orders</h2>
+        <div class="empty-orders">
+            <p>You don't have any current orders.</p>
+        </div>
+        <button class="add-location-btn">
+            Add Location <i class="fas fa-plus"></i>  </button>
+    </main>
+</body>
+</html>

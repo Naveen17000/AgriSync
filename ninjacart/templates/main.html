@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web App</title>
+  <link rel="stylesheet" href="D:\NINJA-CART\css\styles.css"> <!-- Link to your CSS file -->
+</head>
+<style>
+  /* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  main {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  a button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #44b338;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for the button */
+    transition: background-color 0.3s ease;
+  }
+  
+  a button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media query for smaller devices */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+  
+    .logo img {
+      max-width: 200px;
+    }
+  
+    p {
+      font-size: 20px;
+    }
+  }
+  
+</style>
+<body>
+  <header>
+    <div class="logo">
+      <img src="static/images/logo.png" alt="Logo">
+      <h1>AgriSync</h1>
+    </div>
+  </header>
+  <main>
+    <p></p>
+    
+    <a href="http://127.0.0.1:5000/index"><button>Signup To AgriSync</button></a><br>
+    <br>
+    <a href="#"><button>Open TerraTrust</button></a>
+  </main>
+
+  
+</body>
+</html>

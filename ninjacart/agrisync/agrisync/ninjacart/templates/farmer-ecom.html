@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSync - Farmer E-commerce</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .search-container i {
+            font-size: 1.2em;
+            color: #ccc; /* Light gray for search icon */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .warehouse-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .warehouse-item {
+            width: calc(50% - 10px); /* Adjust width based on number of columns */
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .warehouse-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover; /* Resize image to fill container */
+        }
+
+        .warehouse-details {
+            margin-top: 10px;
+        }
+
+        .warehouse-details h4 {
+            margin-bottom: 5px;
+        }
+
+        .warehouse-details p {
+            margin-bottom: 5px;
+        }
+
+        .rent-now-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #2ecc71; /* Green color for button */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="user-info">
+            <a href="http://127.0.0.1:5000/fhome"><img src="static/images/profile-picture.png" alt="Farmer Profile Picture" class="profile-pic"></a>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search for warehouses">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>Available Warehouses and Equipments</h2>
+        <div class="warehouse-list">
+            <div class="warehouse-item">
+                <img src="/static/images/warehouse1.jpg" alt="Warehouse Image" class="warehouse-image">
+                <div class="warehouse-details">
+                    <h4>Warehouse 1</h4>
+                    <p>Location: Salem, Tamilnadu</p>
+                    <p>Capacity: 100 tons</p>
+                    <p>Price: Rs.25,000/month</p>
+                    <button class="rent-now-btn">Rent Now</button>
+                </div>
+            </div>
+            <div class="warehouse-item">
+                <img src="static/images/warehouse2.png" alt="Warehouse Image" class="warehouse-image">
+                
+                <div class="warehouse-details">
+                    <h4>Warehouse 2</h4>
+                    <p>Location: Dharmapuri, Tamilnadu</p>
+                    <p>Capacity: 20 tons</p>
+                    <p>Price: Rs.11,000/month</p>
+                    <button class="rent-now-btn">Rent Now</button>
+                </div>
+            </div>
+            <div class="warehouse-item">
+                <img src="static/images/Tractor.jpg" alt="Equipment Image" class="warehouse-image">
+                
+                <div class="warehouse-details">
+                    <h4>Tractor</h4>
+                    <p>Location: Ramanathapuram, Tamilnadu</p>
+                    <p>Price: Rs.7,000/month</p>
+                    <button class="rent-now-btn">Rent Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+ 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var rentButtons = document.querySelectorAll(".rent-now-btn");
+
+        rentButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                var warehouseDetails = {
+                    location: this.parentNode.querySelector("h4").innerText.split(':')[1].trim(),
+                    capacity: this.parentNode.querySelector("p:nth-child(3)").innerText.split(':')[1].trim(),
+                    price: this.parentNode.querySelector("p:nth-child(4)").innerText.split(':')[1].trim(),
+                    status: "ongoing"
+                };
+                sessionStorage.setItem("rentedWarehouse", JSON.stringify(warehouseDetails));
+                
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSync - Farmer Signup</title>
+</head>
+<style>
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2, p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+</style>
+<body>
+    <header>
+        <h1>AgriSync</h1>
+    </header>
+    <main>
+        <h2>Farmer Sign Up</h2>
+    <form id="farmer-signup-form" action="/signup" method="POST" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+    <br>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" required></textarea>
+    <br>
+    <label for="farm_size">Farm Size(in acre):</label>
+    <input type="text" id="farm_size" name="farm_size" required>
+    <br>
+    <div class="choice">
+        <label for="storage_type">Storage Type</label>
+        <select id="storage_type" name="storage_type" required>
+            <option value="">Select Storage Type</option>
+            <option value="cold_storage">Cold Storage</option>
+            <option value="hard_storage">Hard Storage</option>
+        </select>
+    </div>
+    <br>
+    <label for="farm_pic">Farm Picture(With geotag):</label>
+    <input type="file" id="farm_pic" name="farm_pic" accept="image/*" required>
+    <br>
+    <label for="aadhar_pic">Aadhar Picture</label>
+    <input type="file" id="aadhar_pic" name="aadhar_pic" accept="image/*" required>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+        <p>Already Have an account?</p><br>
+        <a href="http://127.0.0.1:5000/flogin" >Log In</a>
+    </main>
+</body>
+</html>

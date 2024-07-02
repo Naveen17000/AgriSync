@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Login</title>
+    <link rel="stylesheet" href="D:\Ninjacart\Css\farmer_Login.css">
+</head>
+<style>
+    .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+.login-box {
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<body>
+    <div class="container">
+        <header>
+            <h1>Farmer Login</h1>
+        </header>
+        <div class="login-box">
+            <form id="loginForm" action="/flogin" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                </div>
+                <div class="form-group" id="otpGroup" style="display: none;">
+                    <label for="otp">OTP</label>
+                    <input type="text" id="otp" name="otp" required>
+                </div>
+                <button type="submit" id="loginBtn">Login</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            var mobileInput = document.getElementById('mobile');
+            var otpGroup = document.getElementById('otpGroup');
+
+            // Check if mobile number is entered
+            if (mobileInput.value.trim() !== '') {
+                // Check if OTP is entered
+                if (otpGroup.style.display === 'block') {
+                    // Redirect to home.html
+                    window.location.href = "http://127.0.0.1:5000/fecom";
+                } else {
+                    // Show OTP input field
+                    otpGroup.style.display = 'block';
+                }
+            } else {
+                alert('Please enter your mobile number.');
+            }
+        });
+    </script>
+</body>
+</html>

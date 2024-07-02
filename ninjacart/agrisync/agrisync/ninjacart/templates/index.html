@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSync</title>
+    
+</head>
+<style>
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2, p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.signup-container {
+    display: block;
+    justify-content: space-around;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-container h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+.signup-button a{
+    
+    padding-left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.signup-button1 {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #44b338;
+    margin: 5px;
+    margin-left: 240px;
+    font-size: 20px;
+}
+.signup-button2 {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #44b338;
+    margin: 5px;
+    margin-left: 245px;
+    font-size: 20px;
+}
+.signup-button3 {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #44b338;
+    margin: 5px;
+    margin-left: 200px;
+    font-size: 20px;
+}
+.signup-button1:hover {
+    background-color: #0056b3;
+}
+.signup-button2:hover {
+    background-color: #0056b3;
+}
+.signup-button3:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<body>
+    <header>
+        <h1>AgriSync</h1>
+    </header>
+    <main>
+        <h2>Welcome to AgriSync!</h2>
+        <p>Connecting farmers, sellers, and logistic providers for a seamless agricultural experience.</p>
+        <div class="signup-container">
+            <h3>Sign Up</h3>
+            <a href="http://127.0.0.1:5000/signup"><button class="signup-button1">Farmer</button></a>
+            <a href="http://127.0.0.1:5000/ssignup"><button class="signup-button2">Seller</button></a>
+            <a href="http://127.0.0.1:5000/lsignup"><button class="signup-button3">Logistic Provider</button></a>
+        </div>
+    </main>
+</body>
+</html>
